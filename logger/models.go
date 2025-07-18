@@ -9,8 +9,8 @@ const (
 	Both
 )
 const (
-	Debug Level = "Debug"
-	Info  Level = "Info"
-	Warn  Level = "Warn"
-	Error Level = "Error"
+	Debug Level = "DEBUG"
+	Info  Level = "INFO"
+	Warn  Level = "WARN"
+	Fatal Level = "FATAL"
 )

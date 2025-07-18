@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"github.com/aditya-gupta-dev/logger/logger"
+)
 
 func main() {
-	fmt.Println("Hello, Logger")
+	logfile, err := logger.CreateLogger("service.log")
+	if err != nil {
+		panic(err)
+	}
+
+	logfile.LogFileOnly("Application Started..", logger.Info)
+	logfile.LogFileOnly("Application Init..", logger.Debug)
+
+	logfile.LogStdoutOnly("Comic", logger.Info)
+
+	logfile.Close()
 }

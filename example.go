@@ -1,11 +1,9 @@
 package main
 
-import (
-	"github.com/aditya-gupta-dev/logger/logger"
-)
+import "github.com/aditya-gupta-dev/logger/logger"
 
 func main() {
-	logfile, err := logger.CreateLogger("service.log")
+	logfile, err := logger.CreateDefaultLogger("service.log")
 	if err != nil {
 		panic(err)
 	}
@@ -16,4 +14,5 @@ func main() {
 	logfile.LogStdoutOnly("Comic", logger.Info)
 
 	logfile.Close()
+
 }

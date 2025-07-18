@@ -1,0 +1,4 @@
+main
+logger
+*.exe
+test.go

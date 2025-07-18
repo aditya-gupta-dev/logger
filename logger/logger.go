@@ -6,6 +6,10 @@ type Logger struct {
 	file *os.File
 }
 
+func (logger *Logger) log(message string) {
+	logger.file.WriteString(message)
+}
+
 func (logger *Logger) Close() {
 	if logger.file != nil {
 		logger.file.Close()
